@@ -18,5 +18,4 @@ This is a personal portfolio website showcasing my projects, skills, and contact
 - CSS3
 - JavaScript
 
-## 📁 Project Structure
 
