@@ -1,0 +1,97 @@
+:root {
+  --main: #25274D;
+  --accent: #29648A;
+  --contrast: #2E9CCA;
+  --bg: #f4f4f8;
+  --card: #ffffff;
+  --text: #22223b;
+  --muted: #8d99ae;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--main);
+  color: #fff;
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+}
+
+header h1 { margin: 0; }
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover { background: var(--accent); }
+
+main {
+  max-width: 850px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section { margin-bottom: 2.5rem; }
+
+h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+ul.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul.tags li {
+  list-style: none;
+  background: var(--contrast);
+  color: #fff;
+  border-radius: 15px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px #0001;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: var(--main);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  main { padding: 0 0.5rem; }
+  nav ul { flex-direction: column; gap: 0.5rem; }
+}
