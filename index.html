@@ -8,8 +8,11 @@
   <script defer src="main.js"></script>
 </head>
 <body>
+  <div id="scroll-progress"></div>
   <header>
     <h1>Ayush Saha</h1>
+    <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
     <nav>
       <ul>
         <li><a href="#skills">Skills</a></li>
@@ -26,7 +29,11 @@
 
   <main>
     <section id="about">
-      <p>Hello! I'm Ayush Saha, a Computer Science and Engineering student at VIT-AP University with strong interests in research, Generative AI, web development, and art. I enjoy exploring both technology and creative expression.</p>
+      <p>
+        Hello! I'm Ayush Saha, a Computer Science and Engineering student at VIT-AP University.<br><br>
+        I <span class="typing-text"></span><span class="cursor">&nbsp;</span><br><br>
+        With strong interests in research, Generative AI, web development, and art, I enjoy exploring both technology and creative expression.
+      </p>
     </section>
 
     <section id="skills">
@@ -67,9 +74,8 @@
       Worked on Generative AI, PyTorch, Scikit-learn, Java, and R. Building supervised and unsupervised ML
       pipelines, fine-tuning models, and integrating AI solutions into automation workflows. Selected based on
       skills and two rounds of interviews.<br>
-      <a href="https://www.linkedin.com/company/zeepty/" target="_blank">LinkedIn</a><br>
-      <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_internship-aiautomation-zeepty-activity-7401664909807099904-z2O6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs"
-         target="_blank">View Certificate</a>
+      <a href="https://www.linkedin.com/company/zeepty/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_internship-aiautomation-zeepty-activity-7401664909807099904-z2O6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs" target="_blank">View Certificate</a>
     </span>
       </div>
     </section>
@@ -114,6 +120,43 @@
           Developed a smart safety backpack using ESP32, GPS, and a mobile app for real-time alerts and tracking. Emergency buzzer and Bluetooth connectivity included.<br>
           Technologies: ESP32, GPS, Bluetooth, Mobile App Development.
         </p>
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+      I built this project to explore how technology can be used to improve
+      personal safety in real-world situations. Safety during travel and
+      emergencies is a serious concern, and I wanted to work on a solution that
+      combines hardware and software to provide immediate assistance when needed.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      The purpose of this project was to design a portable safety system that can
+      send real-time alerts and location information during emergencies. By using
+      sensors, GPS, and wireless communication, the goal was to create a simple
+      and reliable device that could be easily integrated into everyday use.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      One of the main challenges was integrating multiple hardware components
+      while ensuring reliable communication and low power consumption. Handling
+      real-time GPS data, maintaining stable Bluetooth connectivity, and
+      designing the system to be user-friendly while remaining cost-effective
+      required careful planning and testing.
+    </p>
+  </div>
+</div>
+
       </div>
 
       <div class="project-card">
@@ -121,7 +164,45 @@
         <p>
           Web app using Django, JavaScript, HTML, CSS, and Python for book management, user authentication, and personalized recommendations.<br>
           <a href="https://github.com/TheSlayer7/booklib" target="_blank">GitHub Repository</a>
-        </p>
+        </p> 
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+      I built this project as part of the HackFest hackathon organized by the CSI
+      VIT-AP chapter. The event focused on learning how to build websites from
+      scratch, and this project gave me the opportunity to apply those concepts
+      in a practical, time-bound environment while collaborating and problem
+      solving under hackathon conditions.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      The purpose of this project was to create an interactive web application to
+      help manage books in a library. The goal was to simplify basic library
+      operations such as book tracking and user interaction while improving the
+      overall usability compared to manual or non-interactive systems.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      Building the website from scratch within a limited time frame was a major
+      challenge. Designing an interactive interface, structuring data logically,
+      and ensuring smooth navigation required quick decision-making and constant
+      iteration. Balancing functionality and simplicity during a hackathon was
+      another key challenge.
+    </p>
+  </div>
+</div>
+
       </div>
 
       <div class="project-card">
@@ -130,15 +211,84 @@
           Built using GPT-2 via Hugging Face, Flask backend, and React + TypeScript frontend. Generates creative stories from user prompts in real time.<br>
           <a href="https://github.com/TheSlayer7/Story-GEN-AI" target="_blank">GitHub Repository</a>
         </p>
+        
+<button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+      I built this project as part of my IBM Generative AI certification to practically apply what I was learning in the course. Instead of limiting myself to theoretical concepts, I wanted to prove my understanding of generative AI by building a complete, working application. Creating an AI that could generate new stories from user prompts felt like a fun and meaningful way to explore how language models behave in real scenarios.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+  The main purpose of this project was to gain hands-on experience with generative AI and understand how text generation models work beyond examples and notebooks. I wanted to learn how to deploy a model, control its outputs, and integrate it into a real-time web application. This project helped me connect AI concepts such as prompt design, sampling strategies, and model inference with practical software development.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+One major challenge was dealing with hallucinations in the generated text, where the model would repeat the same word or phrase multiple times. This required experimenting with generation parameters such as temperature and sampling methods to reduce repetition while maintaining creativity. Another challenge was identifying a suitable model that could generate coherent stories while remaining lightweight enough to run efficiently. Solving these issues improved both the quality of the generated stories and my understanding of how generative models behave in practice.
+    </p>
+  </div>
+</div>
+
+
       </div>
 
       <div class="project-card">
         <h3>Portfolio Website | Personal Project</h3>
         <p>
           Personal portfolio website to showcase projects, certifications, and skills.<br>
-          <a href="https://theslayer7.github.io/My-Portfolio" target="_blank">View Portfolio</a> |
+          <a href="https://theslayer7.github.io/My-Portfolio" target="_blank">View Portfolio</a>
           <a href="https://github.com/TheSlayer7/My-Portfolio" target="_blank">GitHub</a>
         </p>
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+      I built this portfolio website to present my projects, skills, and
+      experiences in a structured and accessible way. Rather than relying on
+      pre-made templates, I wanted full control over the design and functionality
+      so that the portfolio itself could serve as a demonstration of my frontend
+      development skills.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      The purpose of this portfolio is to clearly showcase my academic work,
+      technical projects, and research interests to recruiters and collaborators.
+      It also serves as a space to continuously improve the site by adding new
+      features and refining the user experience, while keeping the website
+      lightweight and fast using GitHub Pages.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      One challenge was organizing a large amount of information without
+      overwhelming the user. I had to carefully structure sections, balance
+      content density, and ensure responsiveness across devices. Implementing
+      interactive features such as smooth navigation, dark and light mode, and
+      expandable project details while maintaining performance was another key
+      challenge.
+    </p>
+  </div>
+</div>
+
       </div>
 
       <div class="project-card">
@@ -147,6 +297,44 @@
           Developed multilingual, voice-enabled AI chatbot using Google Gemini API to simplify citizen access to government services. Supports 11+ Indian languages, integrates with DigiLocker, UMANG, CPGRAMS, Bhashini.<br>
           <a href="https://github.com/TheSlayer7/AGSA-AUTOMATED-MULTI-LANG-" target="_blank">GitHub Repository</a>
         </p>
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+      I built AGSA as part of the IndiaAI Impact Generative AI Hackathon organized
+      by IISc CNI and IBM Research. The hackathon focused on using generative AI to
+      solve real-world problems, and this project gave me the opportunity to work
+      on a socially impactful use case involving access to government services.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      The purpose of AGSA was to design a multilingual, voice-enabled AI assistant
+      that could help users navigate government services more easily. The goal
+      was to reduce language barriers and complexity by providing conversational
+      guidance while integrating with existing digital governance platforms.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      Handling multilingual input and maintaining accurate, context-aware
+      responses across different user queries was a significant challenge.
+      Designing effective prompts and managing integrations with external
+      platforms required careful planning. Balancing social impact, system
+      complexity, and usability within the hackathon timeline was another key
+      challenge.
+    </p>
+  </div>
+</div>
+
       </div>
     </section>
 
@@ -179,7 +367,7 @@
       <p>
         <span>Email:</span> <a href="mailto:saha92873@gmail.com">saha92873@gmail.com</a><br>
         <span>GitHub:</span> <a href="https://github.com/TheSlayer7" target="_blank">TheSlayer7</a><br>
-        <span>LinkedIn:</span> <a href="http://www.linkedin.com/in/ayush-saha-11ba7a334" target="_blank">ayush-saha-11ba7a334</a>
+        <span>LinkedIn:</span> <a href="http://www.linkedin.com/in/ayush-saha-11ba7a334" target="_blank">Ayush-Saha</a>
       </p>
     </section>
   </main>
@@ -187,5 +375,7 @@
   <footer>
     <p>&copy; 2025 Ayush Saha</p>
   </footer>
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
 </body>
 </html>
