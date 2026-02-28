@@ -248,7 +248,7 @@ One major challenge was dealing with hallucinations in the generated text, where
         <p>
           Personal portfolio website to showcase projects, certifications, and skills.<br>
           <a href="https://theslayer7.github.io/My-Portfolio" target="_blank">View Portfolio</a>
-          <a href="https://github.com/TheSlayer7/My-Portfolio" target="_blank">GitHub</a>
+          <a href="https://github.com/TheSlayer7/My-Portfolio" target="_blank">GitHub Repository</a>
         </p>
         <button class="details-toggle" aria-expanded="false">
   ▶ View project details
@@ -332,6 +332,40 @@ One major challenge was dealing with hallucinations in the generated text, where
       platforms required careful planning. Balancing social impact, system
       complexity, and usability within the hackathon timeline was another key
       challenge.
+    </p>
+  </div>
+</div>
+
+      </div>
+      <div class="project-card">
+        <h3>Automated Microplastic Detector | VIT-AP University (Jan'26)</h3>
+        <p>
+          Developed a Deep Learning-based image segmentation pipeline to automate the identification and quantification of microplastic contaminants in environmental samples.<br>
+          <a href="https://github.com/TheSlayer7/MicroplasticsModel_Trainer" target="_blank">GitHub Repository</a>
+        </p>
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+     As part of my Engineering Clinics project, I aimed to solve a critical bottleneck in aquatic research: the manual identification of microplastic pollutants. Traditional monitoring methods in environmental science are incredibly time-consuming and prone to human error, as they rely on researchers manually counting microscopic particles. I developed this automated detection pipeline to transform hours of manual lab work into sub-second digital analysis, providing an objective and scalable way to measure plastic concentrations in water bodies and protect aquatic health.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      Developed as part of an Engineering Clinics initiative, this project addresses the global challenge of micro-pollutant monitoring. Manual identification of synthetic particles in water samples is a slow, subjective process that hinders large-scale research. I built this automated detection pipeline to transform hours of laboratory microscopy into sub-second digital analysis. By creating an objective, machine-driven metric, the system provides a scalable tool for wastewater facilities and marine biologists to accurately track pollution levels and protect aquatic health.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      The primary challenge involved the high-fidelity detection of microscopic fibers, which are often so thin they can be "lost" or blurred during standard image processing. I solved this by implementing an architecture that preserves high-resolution spatial details, ensuring the geometric properties of fine synthetic threads are maintained. To handle "noise"—such as organic debris and air bubbles that mimic plastic—I engineered a preprocessing pipeline to normalize pixel intensities, allowing the model to distinguish synthetic polymers from natural matter. Finally, to overcome the extreme data imbalance where plastic occupies only a tiny fraction of the image, I utilized pixel-wise overlap metrics to ensure the system prioritized precise pollutant identification over the empty background.
     </p>
   </div>
 </div>
