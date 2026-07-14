@@ -55,18 +55,22 @@
     <section id="education">
       <h2>Education</h2>
       <ul>
-        <li><b>Computer Science and Engineering</b> | VIT-AP University (Sep’23 – Present) | CGPA: 8.64</li>
+        <li><b>Computer Science and Engineering</b> | VIT-AP University (Sep’23 – Present) | CGPA: 8.54</li>
         <li><b>XII (CBSE)</b> | Sri Sri Ravishankar Vidya Mandir | 87.8% (2022)</li>
         <li><b>Art School</b> | J.B. School of Fine Arts (2008–2020)</li>
       </ul>
     </section>
 
     <section id="experience">
-      <h2>Experience / Research</h2>
+      <h2>NIT Calicut Summer Intern</h2>
       <div>
-        <strong>Mars Exploration Research – SEDS VIT-AP</strong> (Oct’23 – Present)<br>
+        <strong>NIT Calicut– Finance Department (Centre for Information Technology, Research and Automation)</strong> (May'26 - July'26)<br>
         <span>
-          Explored human settlement on Mars, focusing on astrobiology, in-situ resource utilization, environmental challenges, and habitat development. Evaluated current technological approaches and sustainability strategies for long-term colonization. Contributed original analysis and conceptual frameworks. Co-authoring the paper “Mars: Exploring Life on the Red Planet” (under review).
+           Developed a TA Tracking System for the Finance Department to manage TA assignments, attendance, and stipend
+disbursement workflows.Building backend data pipelines and a web interface to automate department-level reporting and reduce manual admin
+istrative overhead.<br>
+<a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_summerinternship-nitcalicut-citra-ugcPost-7451666933206401024-RN2t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs">View Certificate</a>
+<a href="https://github.com/TheSlayer7/TA-TRACKING">View Project</a>
         </span>
       </div>
       <div>
@@ -80,7 +84,7 @@
     </span>
       </div>
       <div>
-       <strong>AI/ML Data Analyst — GDG VIT-AP (Google Developer Groups)</strong> (Mar'26 - Present)<br>
+       <strong>AI/ML Data Analyst — GDG VIT-AP (Google Developer Groups)</strong> (Mar'26 - July'26)<br>
     <span>
       Contributing to AI/ML initiatives within the GDG VIT-AP community through data analysis, dataset preprocessing, and machine learning experimentation. Working with team members on AI-driven projects and exploring practical applications of machine learning and data analytics.<br>
       <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_ai-machinelearning-dataanalysis-activity-7435411698083123200-etZ0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs" target="_blank">View Certificate</a>
@@ -121,7 +125,78 @@
 
     <section id="projects">
       <h2>Academic Projects</h2>
+<div class="project-card">
+        <h3>TA Tracking System | NIT Calicut Internship Project</h3>
+        <p>
+          Developed a full-stack Travel Allowance (TA) claims tracking system for the Finance Department, covering claim submission, review, and approval workflows. Implemented JWT-based authentication with optional TOTP two-factor login, and Role-Based Access Control (RBAC) across Admin, Faculty, and TA-style user roles. Built the PostgreSQL schema, migrations, and seed scripts, along with REST API routes consumed by a React frontend.
+<br>
+          Technologies: Node.js, Express.js, React (Vite), PostgreSQL, JWT, TOTP-based 2FA, REST APIs.
+<br>
+       <a href="https://github.com/TheSlayer7/TA-TRACKING" target="_blank">GitHub Repository</a> 
+</p>
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
 
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+      During my internship with NIT Calicut's Finance Department, TA (Teaching Assistant) claim processing was handled manually, which made it slow to track submissions, verify approvals, and maintain accountability across different roles. I built this system to digitize and automate that workflow while ensuring proper access control between admins, faculty, and TAs.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      The purpose of this project was to give the Finance Department a reliable, role-aware platform for submitting, reviewing, and approving TA claims. The goal was to replace manual tracking with a secure, auditable system that clearly separates what each role (Admin, Faculty, TA) can see and do, while keeping the claims process transparent and easy to follow.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      One of the main challenges was designing a clean Role-Based Access Control system that correctly restricted claim visibility and actions across Admin, Faculty, and TA roles without adding unnecessary complexity to the API. Implementing secure authentication (JWT plus optional TOTP two-factor login) while keeping the login flow simple for non-technical department staff also required careful UX and security trade-offs. Structuring the PostgreSQL schema and migrations to support claim states (submitted, reviewed, approved) cleanly, and keeping the Express backend and React frontend in sync during active development, required consistent testing and iteration.
+    </p>
+  </div>
+</div>
+
+      </div>
+      <div class="project-card">
+        <h3>Automated Microplastic Detector | VIT-AP University TOP 10 in ENGINEERING CLINICS EXTERNAL EXPO (Jan'26)</h3>
+        <p>
+          Developed a Deep Learning-based image segmentation pipeline to automate the identification and quantification of microplastic contaminants in environmental samples.<br>
+          <a href="https://github.com/TheSlayer7/MicroplasticsModel_Trainer" target="_blank">GitHub Repository</a>
+          <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_research-environment-python-share-7458816907521990657-kipS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs">View Certificate</a>
+        </p>
+        <button class="details-toggle" aria-expanded="false">
+  ▶ View project details
+</button>
+
+<div class="project-details" hidden>
+  <div class="detail-block">
+    <h4>Why I built this</h4>
+    <p>
+     As part of my Engineering Clinics project, I aimed to solve a critical bottleneck in aquatic research: the manual identification of microplastic pollutants. Traditional monitoring methods in environmental science are incredibly time-consuming and prone to human error, as they rely on researchers manually counting microscopic particles. I developed this automated detection pipeline to transform hours of manual lab work into sub-second digital analysis, providing an objective and scalable way to measure plastic concentrations in water bodies and protect aquatic health.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Purpose</h4>
+    <p>
+      Developed as part of an Engineering Clinics initiative, this project addresses the global challenge of micro-pollutant monitoring. Manual identification of synthetic particles in water samples is a slow, subjective process that hinders large-scale research. I built this automated detection pipeline to transform hours of laboratory microscopy into sub-second digital analysis. By creating an objective, machine-driven metric, the system provides a scalable tool for wastewater facilities and marine biologists to accurately track pollution levels and protect aquatic health.
+    </p>
+  </div>
+
+  <div class="detail-block">
+    <h4>Challenges</h4>
+    <p>
+      The primary challenge involved the high-fidelity detection of microscopic fibers, which are often so thin they can be "lost" or blurred during standard image processing. I solved this by implementing an architecture that preserves high-resolution spatial details, ensuring the geometric properties of fine synthetic threads are maintained. To handle "noise"—such as organic debris and air bubbles that mimic plastic—I engineered a preprocessing pipeline to normalize pixel intensities, allowing the model to distinguish synthetic polymers from natural matter. Finally, to overcome the extreme data imbalance where plastic occupies only a tiny fraction of the image, I utilized pixel-wise overlap metrics to ensure the system prioritized precise pollutant identification over the empty background.
+    </p>
+  </div>
+</div>
+
+      </div>
       <div class="project-card">
         <h3>Women Safety Backpack | VIT-AP University (Nov’24)</h3>
         <p>
@@ -381,45 +456,13 @@ One major challenge was dealing with hallucinations in the generated text, where
 </div>
 
       </div>
-      <div class="project-card">
-        <h3>Automated Microplastic Detector | VIT-AP University (Jan'26)</h3>
-        <p>
-          Developed a Deep Learning-based image segmentation pipeline to automate the identification and quantification of microplastic contaminants in environmental samples.<br>
-          <a href="https://github.com/TheSlayer7/MicroplasticsModel_Trainer" target="_blank">GitHub Repository</a>
-        </p>
-        <button class="details-toggle" aria-expanded="false">
-  ▶ View project details
-</button>
 
-<div class="project-details" hidden>
-  <div class="detail-block">
-    <h4>Why I built this</h4>
-    <p>
-     As part of my Engineering Clinics project, I aimed to solve a critical bottleneck in aquatic research: the manual identification of microplastic pollutants. Traditional monitoring methods in environmental science are incredibly time-consuming and prone to human error, as they rely on researchers manually counting microscopic particles. I developed this automated detection pipeline to transform hours of manual lab work into sub-second digital analysis, providing an objective and scalable way to measure plastic concentrations in water bodies and protect aquatic health.
-    </p>
-  </div>
-
-  <div class="detail-block">
-    <h4>Purpose</h4>
-    <p>
-      Developed as part of an Engineering Clinics initiative, this project addresses the global challenge of micro-pollutant monitoring. Manual identification of synthetic particles in water samples is a slow, subjective process that hinders large-scale research. I built this automated detection pipeline to transform hours of laboratory microscopy into sub-second digital analysis. By creating an objective, machine-driven metric, the system provides a scalable tool for wastewater facilities and marine biologists to accurately track pollution levels and protect aquatic health.
-    </p>
-  </div>
-
-  <div class="detail-block">
-    <h4>Challenges</h4>
-    <p>
-      The primary challenge involved the high-fidelity detection of microscopic fibers, which are often so thin they can be "lost" or blurred during standard image processing. I solved this by implementing an architecture that preserves high-resolution spatial details, ensuring the geometric properties of fine synthetic threads are maintained. To handle "noise"—such as organic debris and air bubbles that mimic plastic—I engineered a preprocessing pipeline to normalize pixel intensities, allowing the model to distinguish synthetic polymers from natural matter. Finally, to overcome the extreme data imbalance where plastic occupies only a tiny fraction of the image, I utilized pixel-wise overlap metrics to ensure the system prioritized precise pollutant identification over the empty background.
-    </p>
-  </div>
-</div>
-
-      </div>
     </section>
 
     <section id="achievements">
       <h2>Achievements & Hobbies</h2>
       <ul>
+         <li><b>Top 10 in Engineering clinics expo VIT-AP University</b> - For the Microplastic Detection Project mentioned above.</li>
         <li><b>Gold Medal & Diploma of Distinction</b> - International Youth & Child Art Exhibition, 2012</li>
         <li><b>First Place</b> - Indian Oil Drawing Competition, 2013</li>
         <li><b>State-Level Painting Competition</b> - Energy Conservation Campaign, 2013</li>
