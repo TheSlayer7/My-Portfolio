@@ -65,10 +65,23 @@ body {
 
 
 header {
+  position: relative;
   text-align: center;
   padding: 3rem 1rem 1rem;
   background: transparent;
   transition: all 0.3s ease;
+}
+
+#themeToggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
 }
 
 header h1 {
@@ -1134,7 +1147,9 @@ body.dark .glowing-orb {
 .pixel-welcome { 
   font-family: 'Press Start 2P', monospace; 
   text-transform: uppercase; 
-  font-size: 1.5rem;
+  font-size: 3rem;
+  display: block;
+  text-align: center;
 }
 
 @keyframes breatheColorsDay {

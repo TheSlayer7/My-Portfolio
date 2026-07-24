@@ -27,9 +27,10 @@ const profileImg = document.getElementById('profile-img');
 
 if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark');
-  if(themeToggle) themeToggle.textContent = '☀️';
+  if(themeToggle) themeToggle.textContent = '🌙';
   if(profileImg) profileImg.src = 'NightProfile.png';
 } else {
+  if(themeToggle) themeToggle.textContent = '☀️';
   if(profileImg) profileImg.src = 'MorningProfile.png';
 }
 
@@ -37,7 +38,7 @@ if(themeToggle) {
   themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark');
     const isDark = body.classList.contains('dark');
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    themeToggle.textContent = isDark ? '🌙' : '☀️';
     if(profileImg) profileImg.src = isDark ? 'NightProfile.png' : 'MorningProfile.png';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
