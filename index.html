@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ayush Saha | Computer Engineer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="main.js"></script>
 </head>
@@ -71,18 +71,39 @@
     </section>
 
     <section id="skills">
-      <h2>Skills</h2>
-      <ul class="tags">
-        <li>Java</li>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Python</li>
-        <li>AI and Machine Learning</li>
-        <li>C/C++</li>
-        <li>OOP</li>
-        <li>SQL</li>
-        <li>Generative AI</li>
-        <li>AWS (Amazon Web Services)</li>
-      </ul>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <ul class="tags">
+            <li>Python</li><li>Java</li><li>C/C++</li><li>SQL</li><li>R</li><li>JavaScript</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-globe"></i> Web & Frameworks</h3>
+          <ul class="tags">
+            <li>HTML/CSS</li><li>Django</li><li>Flask</li><li>React</li><li>TypeScript</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-brain"></i> ML / AI</h3>
+          <ul class="tags">
+            <li>PyTorch</li><li>Scikit-learn</li><li>TensorFlow</li><li>Hugging Face</li><li>U-Net CNN</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-cloud"></i> Cloud & Tools</h3>
+          <ul class="tags">
+            <li>AWS (EC2, S3, IAM, VPC)</li><li>IBM Watsonx</li><li>Google Gemini API</li><li>Git</li><li>ESP32</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-lightbulb"></i> Concepts</h3>
+          <ul class="tags">
+            <li>OOP</li><li>ML Pipelines</li><li>Deep Learning</li><li>Generative AI</li><li>Soft Computing</li><li>DSA</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="education">
@@ -100,10 +121,10 @@
         <strong>NIT Calicut– Finance Department (Centre for Information Technology, Research and Automation)</strong>
         (May'26 - July'26)<br>
         <span>
-          Developed a TA Tracking System for the Finance Department to manage TA assignments, attendance, and stipend
-          disbursement workflows.Building backend data pipelines and a web interface to automate department-level
-          reporting and reduce manual admin
-          istrative overhead.<br>
+          Developed a full-stack TA (Travel Allowance) claims tracking system for the Finance Department under CITRA, 
+          covering claim submission, review, and approval workflows with Role-Based Access Control (RBAC) across Admin, Faculty, and TA roles. 
+          Built backend REST APIs and a React web interface with JWT-based authentication (including TOTP two-factor login) 
+          and a PostgreSQL schema to automate department-level claim tracking and reduce manual administrative overhead.<br>
           <a
             href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_summerinternship-nitcalicut-citra-ugcPost-7451666933206401024-RN2t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs">View
             Certificate</a>
@@ -113,9 +134,9 @@
       <div>
         <strong>AI Automation Engineer Intern – Zeepty India</strong> (Aug’25 – Nov'25)<br>
         <span>
-          Worked on Generative AI, PyTorch, Scikit-learn, Java, and R. Building supervised and unsupervised ML
-          pipelines, fine-tuning models, and integrating AI solutions into automation workflows. Selected based on
-          skills and two rounds of interviews.<br>
+          Built supervised and unsupervised ML pipelines using PyTorch and Scikit-learn; fine-tuned models for production 
+          AI automation tasks. Preprocessed and integrated CSV datasets into ML pipelines, and automated end-to-end 
+          data workflows using Python.<br>
           <a href="https://www.linkedin.com/company/zeepty/" target="_blank">LinkedIn</a>
           <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_internship-aiautomation-zeepty-activity-7401664909807099904-z2O6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs"
             target="_blank">View Certificate</a>
@@ -124,9 +145,8 @@
       <div>
         <strong>AI/ML Data Analyst — GDG VIT-AP (Google Developer Groups)</strong> (Mar'26 - July'26)<br>
         <span>
-          Contributing to AI/ML initiatives within the GDG VIT-AP community through data analysis, dataset
-          preprocessing, and machine learning experimentation. Working with team members on AI-driven projects and
-          exploring practical applications of machine learning and data analytics.<br>
+          Performing dataset analysis, preprocessing, and supporting machine learning experiments within GDG VIT-AP’s 
+          AI initiatives.<br>
           <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_ai-machinelearning-dataanalysis-activity-7435411698083123200-etZ0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs"
             target="_blank">View Certificate</a>
         </span>
@@ -137,9 +157,9 @@
       <h2>Certifications</h2>
       <ul>
         <li>
-          <b>IBMCE_CEWXAI1IN Certificate</b><br>
-          Completed IBM’s “Generative AI Using Watsonx (CEWXAI1IN)” course. Gained skills in prompt engineering,
-          fine-tuning, and deploying GenAI models using Watsonx.ai & Watsonx.data with a focus on responsible AI.<br>
+          <b>IBM – Generative AI Using Watsonx (CEWXAI1IN)</b><br>
+          Prompt engineering, fine-tuning, and responsible GenAI deployment on Watsonx.ai & Watsonx.data. 
+          Issued by IBM Career Education.<br>
           <a href="https://courses.vit.skillsnetwork.site/certificates/a04a03e4a2a046579ac5546fced863cd#"
             target="_blank">View Certificate</a>
         </li>
@@ -235,11 +255,10 @@
 
       </div>
       <div class="project-card" data-category="ai">
-        <h3>Automated Microplastic Detector | VIT-AP University TOP 10 in ENGINEERING CLINICS EXTERNAL EXPO (Jan'26)
-        </h3>
+        <h3>Microplastic Detection System | Python, U-Net CNN, Deep Learning, OpenCV</h3>
         <p>
-          Developed a Deep Learning-based image segmentation pipeline to automate the identification and quantification
-          of microplastic contaminants in environmental samples.<br>
+          Designed a deep learning segmentation pipeline using Residual U-Net CNN to detect and quantify microplastic 
+          pollutants in water samples. Ranked among the Top 10 teams at the VIT-AP External Expo (Engineering Clinics, 2026).<br>
           <a href="https://github.com/TheSlayer7/MicroplasticsModel_Trainer" target="_blank">GitHub Repository</a>
           <a
             href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_research-environment-python-share-7458816907521990657-kipS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs">View
@@ -335,15 +354,48 @@
         </div>
 
       </div>
-      <div class="project-card" data-category="hardware">
-        <h3>Secure File Sharing Software | Personal Project</h3>
+      <div class="project-card" data-category="ai">
+        <h3>AGSA – Automated Government Service Agent | Google Gemini API, IBM Watsonx, Python</h3>
         <p>
-          Developed a peer-to-peer file sharing desktop application using Python that enables secure file transfer over
-          a local network. Implemented encryption using AES, HMAC authentication, and PBKDF2 for secure communication.
-          Features include device discovery, drag-and-drop file transfer, pause/resume functionality, and real-time
-          speed tracking.
+          Multilingual voice-enabled AI chatbot supporting 11+ Indian languages with scheme discovery, DigiLocker verification, 
+          and UMANG/CPGRAMS integration. Built at IndiaAI Hackathon – IISc CNI & IBM Research.<br>
+          <a href="https://github.com/TheSlayer7/AGSA-AUTOMATED-MULTI-LANG-" target="_blank">GitHub Repository</a>
+        </p>
+        <button class="details-toggle" aria-expanded="false">
+          ▶ View project details
+        </button>
+
+        <div class="project-details" hidden>
+          <div class="detail-block">
+            <h4>Why I built this</h4>
+            <p>
+              I built AGSA as part of the IndiaAI Impact Generative AI Hackathon organized by IISc CNI and IBM Research. The hackathon focused on using generative AI to solve real-world problems, and this project gave me the opportunity to work on a socially impactful use case involving access to government services.
+            </p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Purpose</h4>
+            <p>
+              The purpose of AGSA was to design a multilingual, voice-enabled AI assistant that could help users navigate government services more easily. The goal was to reduce language barriers and complexity by providing conversational guidance while integrating with existing digital governance platforms.
+            </p>
+          </div>
+
+          <div class="detail-block">
+            <h4>Challenges</h4>
+            <p>
+              Handling multilingual input and maintaining accurate, context-aware responses across different user queries was a significant challenge. Designing effective prompts and managing integrations with external platforms required careful planning. Balancing social impact, system complexity, and usability within the hackathon timeline was another key challenge.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="hardware">
+        <h3>MyFileSharingSoftware | Python, TCP/UDP Sockets, AES-256, CustomTkinter</h3>
+        <p>
+          Lightweight encrypted P2P LAN file sharing desktop app using AES-256-CTR encryption, PBKDF2 key derivation, 
+          UDP device discovery, and SHA-256 integrity verification—no internet or third-party servers required.
           <br>
-          Technologies: Python, Socket Programming, Cryptography (AES, HMAC, PBKDF2), CustomTkinter, Multithreading.
+          Technologies: Python, TCP/UDP Sockets, AES-256, CustomTkinter, Multithreading.
           <br>
           <a href="https://github.com/TheSlayer7/MyFileShare_Software" target="_blank">GitHub Repository</a>
         </p>
