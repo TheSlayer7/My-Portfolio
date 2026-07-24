@@ -19,7 +19,7 @@ Thumbs.db
 # Backups
 *.backup.*
 *.bak
-backup*.zip
+*.zip
 
 # Inspiration files
 Inspiration*.png
