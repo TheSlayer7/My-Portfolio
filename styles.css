@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
   --main: #ffffff;
@@ -479,6 +478,7 @@ header h1, h2, .typing-text, .typing-text-spotlight {
   background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   background-size: 300% 300%;
   animation: gradientFlow 3s ease infinite;
 }
