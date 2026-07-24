@@ -10,6 +10,11 @@
 </head>
 
 <body>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
   <div id="scroll-progress"></div>
   <header>
     <h1>Ayush Saha</h1>
@@ -30,13 +35,39 @@
   </header>
 
   <main>
-    <section id="about">
-      <p>
-        Hello! I'm Ayush Saha, a Computer Science and Engineering student at VIT-AP University.<br><br>
-        I <span class="typing-text"></span><span class="cursor">&nbsp;</span><br><br>
-        With strong interests in research, Generative AI, web development, and art, I enjoy exploring both technology
-        and creative expression.
-      </p>
+    <section id="about" class="hero-section">
+      <div class="hero-content">
+        <div class="hero-content-base">
+          <p class="hero-greeting">Hello! I'm</p>
+          <h2 class="hero-name">Ayush Saha</h2>
+          <p class="hero-tagline">
+            I <span class="typing-text"></span><span class="cursor">&nbsp;</span>
+          </p>
+          <p class="hero-desc">
+            Computer Science and Engineering student at VIT-AP University. 
+            With strong interests in research, Generative AI, web development, and art, 
+            I enjoy exploring both technology and creative expression.
+          </p>
+        </div>
+        <div class="hero-content-spotlight" aria-hidden="true">
+          <p class="hero-greeting">Hello! I'm</p>
+          <h2 class="hero-name">Ayush Saha</h2>
+          <p class="hero-tagline">
+            I <span class="typing-text-spotlight"></span><span class="cursor">&nbsp;</span>
+          </p>
+          <p class="hero-desc">
+            Computer Science and Engineering student at VIT-AP University. 
+            With strong interests in research, Generative AI, web development, and art, 
+            I enjoy exploring both technology and creative expression.
+          </p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="glowing-orb"></div>
+        <div class="profile-container">
+          <img src="photo.png" alt="Ayush Saha" class="profile-image">
+        </div>
+      </div>
     </section>
 
     <section id="skills">
@@ -49,7 +80,6 @@
         <li>C/C++</li>
         <li>OOP</li>
         <li>SQL</li>
-        <li>Soft Computing</li>
         <li>Generative AI</li>
         <li>AWS (Amazon Web Services)</li>
       </ul>
@@ -145,7 +175,14 @@
 
     <section id="projects">
       <h2>Academic Projects</h2>
-      <div class="project-card">
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="ai">AI & ML</button>
+        <button class="filter-btn" data-filter="hardware">Hardware/Software</button>
+      </div>
+
+      <div class="project-card" data-category="web">
         <h3>TA Tracking System | NIT Calicut Internship Project</h3>
         <p>
           Developed a full-stack Travel Allowance (TA) claims tracking system for the Finance Department, covering claim
@@ -197,7 +234,7 @@
         </div>
 
       </div>
-      <div class="project-card">
+      <div class="project-card" data-category="ai">
         <h3>Automated Microplastic Detector | VIT-AP University TOP 10 in ENGINEERING CLINICS EXTERNAL EXPO (Jan'26)
         </h3>
         <p>
@@ -253,7 +290,7 @@
         </div>
 
       </div>
-      <div class="project-card">
+      <div class="project-card" data-category="hardware">
         <h3>Women Safety Backpack | VIT-AP University (Nov’24)</h3>
         <p>
           Developed a smart safety backpack using ESP32, GPS, and a mobile app for real-time alerts and tracking.
@@ -298,7 +335,7 @@
         </div>
 
       </div>
-      <div class="project-card">
+      <div class="project-card" data-category="hardware">
         <h3>Secure File Sharing Software | Personal Project</h3>
         <p>
           Developed a peer-to-peer file sharing desktop application using Python that enables secure file transfer over
@@ -346,7 +383,7 @@
 
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="web">
         <h3>Booklib Library Management Website</h3>
         <p>
           Web app using Django, JavaScript, HTML, CSS, and Python for book management, user authentication, and
@@ -393,7 +430,7 @@
 
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="ai">
         <h3>AI Story Generator | IBM Generative AI Certification Project</h3>
         <p>
           Built using GPT-2 via Hugging Face, Flask backend, and React + TypeScript frontend. Generates creative stories
@@ -444,7 +481,7 @@
 
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="web">
         <h3>Portfolio Website | Personal Project</h3>
         <p>
           Personal portfolio website to showcase projects, certifications, and skills.<br>
@@ -493,7 +530,7 @@
 
       </div>
 
-      <div class="project-card">
+      <div class="project-card" data-category="ai">
         <h3>AGSA – Automated Government Service Agent | Multi-Language</h3>
         <p>
           Developed multilingual, voice-enabled AI chatbot using Google Gemini API to simplify citizen access to
@@ -578,10 +615,33 @@
     </section>
   </main>
 
+  <section id="minigame" class="reveal" style="max-width: 600px; margin: 0 auto 4rem auto; text-align: center;">
+    <h2>Take a Break</h2>
+    <div class="tictactoe-container" style="background: var(--card); border: 1px solid var(--border); padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+      <div class="score-board" style="display: flex; justify-content: space-around; margin-bottom: 1.5rem; font-weight: bold; color: var(--text);">
+        <div class="score-badge">You (X): <span id="scoreX" style="color: var(--accent);">0</span></div>
+        <div class="score-badge">Ties: <span id="scoreTie">0</span></div>
+        <div class="score-badge">AI (O): <span id="scoreO" style="color: #ef4444;">0</span></div>
+      </div>
+      <div class="tictactoe-board" id="board" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 300px; margin: 0 auto 1.5rem auto;">
+        <div class="cell" data-index="0"></div><div class="cell" data-index="1"></div><div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div><div class="cell" data-index="4"></div><div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div><div class="cell" data-index="7"></div><div class="cell" data-index="8"></div>
+      </div>
+      <button id="resetGameBtn" class="filter-btn">Reset Game</button>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Ayush Saha</p>
   </footer>
-  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+  
+  <div id="scrollTopContainer" class="scroll-top-container">
+    <svg class="progress-ring" width="50" height="50">
+      <circle class="progress-ring__circle" stroke="var(--accent)" stroke-width="3" fill="transparent" r="22" cx="25" cy="25"/>
+    </svg>
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+  </div>
 
 </body>
 
