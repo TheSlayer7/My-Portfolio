@@ -589,6 +589,9 @@ header h1, h2, .typing-text, .typing-text-spotlight {
 }
 
 @media (max-width: 768px) {
+  body::before {
+    background-size: 100% 100%;
+  }
   #projects {
     grid-template-columns: 1fr;
   }
