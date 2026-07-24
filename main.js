@@ -10,14 +10,7 @@ document.querySelectorAll('nav a').forEach(link => {
 
 const scrollContainer = document.getElementById('scrollTopContainer');
 const scrollTopBtn = document.getElementById('scrollTopBtn');
-const progressCircle = document.querySelector('.progress-ring__circle');
-let radius = 22;
-let circumference = radius * 2 * Math.PI;
-
-if (progressCircle) {
-  progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
-  progressCircle.style.strokeDashoffset = circumference;
-}
+const hpFill = document.getElementById('hp-fill');
 
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({
@@ -30,9 +23,14 @@ const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
 // Check saved theme
+const profileImg = document.getElementById('profile-img');
+
 if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark');
   if(themeToggle) themeToggle.textContent = '☀️';
+  if(profileImg) profileImg.src = 'NightProfile.png';
+} else {
+  if(profileImg) profileImg.src = 'MorningProfile.png';
 }
 
 if(themeToggle) {
@@ -40,6 +38,7 @@ if(themeToggle) {
     body.classList.toggle('dark');
     const isDark = body.classList.contains('dark');
     themeToggle.textContent = isDark ? '☀️' : '🌙';
+    if(profileImg) profileImg.src = isDark ? 'NightProfile.png' : 'MorningProfile.png';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
@@ -143,10 +142,22 @@ window.addEventListener('scroll', () => {
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const scrolled = (winScroll / height);
 
-  // Update ring
-  if (progressCircle) {
-    const offset = circumference - scrolled * circumference;
-    progressCircle.style.strokeDashoffset = offset;
+  // Update HP bar
+  if (hpFill) {
+    const percentage = Math.min(Math.max(scrolled * 100, 0), 100);
+    hpFill.style.width = `${percentage}%`;
+    
+    let r, g, b;
+    if (percentage < 50) {
+      r = 255;
+      g = Math.round(5.1 * percentage);
+      b = 0;
+    } else {
+      r = Math.round(255 - 5.1 * (percentage - 50));
+      g = 255;
+      b = 0;
+    }
+    hpFill.style.background = `rgb(${r}, ${g}, ${b})`;
   }
 
   // Show hide button container
@@ -193,93 +204,7 @@ if (heroSection && spotlight) {
   });
 }
 
-// Tic Tac Toe Logic
-const tictactoeCells = document.querySelectorAll('.tictactoe-board .cell');
-const resetBtn = document.getElementById('resetGameBtn');
-const scoreXEl = document.getElementById('scoreX');
-const scoreOEl = document.getElementById('scoreO');
-const scoreTieEl = document.getElementById('scoreTie');
-
-let tttBoard = ['', '', '', '', '', '', '', '', ''];
-let tttGameActive = true;
-let tttScores = { X: 0, O: 0, Tie: 0 };
-const WIN_CONDITIONS = [
-  [0, 1, 2], [3, 4, 5], [6, 7, 8],
-  [0, 3, 6], [1, 4, 7], [2, 5, 8],
-  [0, 4, 8], [2, 4, 6]
-];
-
-if (tictactoeCells.length > 0) {
-  tictactoeCells.forEach(cell => cell.addEventListener('click', handleCellClick));
-  resetBtn.addEventListener('click', resetBoard);
-}
-
-function handleCellClick(e) {
-  const cell = e.target;
-  const index = parseInt(cell.getAttribute('data-index'));
-
-  if (tttBoard[index] !== '' || !tttGameActive) return;
-
-  // Player move
-  makeMove(index, 'X');
-  
-  if (checkWin('X')) {
-    endGame('X');
-    return;
-  }
-  if (checkDraw()) {
-    endGame('Tie');
-    return;
-  }
-
-  // AI move
-  setTimeout(() => {
-    let emptyCells = tttBoard.map((val, i) => val === '' ? i : null).filter(val => val !== null);
-    if (emptyCells.length > 0 && tttGameActive) {
-      const randomMove = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-      makeMove(randomMove, 'O');
-      if (checkWin('O')) endGame('O');
-      else if (checkDraw()) endGame('Tie');
-    }
-  }, 400);
-}
-
-function makeMove(index, player) {
-  tttBoard[index] = player;
-  const cell = document.querySelector(`.cell[data-index="${index}"]`);
-  cell.textContent = player;
-  cell.classList.add(player.toLowerCase());
-}
-
-function checkWin(player) {
-  return WIN_CONDITIONS.some(condition => {
-    return condition.every(index => tttBoard[index] === player);
-  });
-}
-
-function checkDraw() {
-  return tttBoard.every(cell => cell !== '');
-}
-
-function endGame(winner) {
-  tttGameActive = false;
-  if (winner === 'X') tttScores.X++;
-  else if (winner === 'O') tttScores.O++;
-  else tttScores.Tie++;
-  
-  scoreXEl.textContent = tttScores.X;
-  scoreOEl.textContent = tttScores.O;
-  scoreTieEl.textContent = tttScores.Tie;
-}
-
-function resetBoard() {
-  tttBoard = ['', '', '', '', '', '', '', '', ''];
-  tttGameActive = true;
-  tictactoeCells.forEach(cell => {
-    cell.textContent = '';
-    cell.classList.remove('x', 'o');
-  });
-}
+// Old Tic Tac Toe Logic removed to prevent conflicts.
 
 // Project Filtering Logic
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -306,10 +231,111 @@ filterBtns.forEach(btn => {
 
 // Parallax Effect for Hero Section
 const heroVisual = document.querySelector('.hero-visual');
+
 window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
   if (heroVisual) {
-    const scrolled = window.scrollY;
-    // Move the visual slightly slower than the scroll speed
     heroVisual.style.transform = `translateY(${scrolled * 0.25}px)`;
   }
 });
+
+// Email link functionality
+const emailLink = document.getElementById('email-link');
+if(emailLink) {
+  emailLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    const email = 'saha92873@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+      const originalText = emailLink.innerHTML;
+      emailLink.innerHTML = '▶ Copied!';
+      emailLink.classList.add('text-glow-breathing');
+      setTimeout(() => { 
+        emailLink.innerHTML = originalText; 
+        emailLink.classList.remove('text-glow-breathing');
+      }, 2000);
+    });
+  });
+}
+
+// Tic-Tac-Toe Logic
+const tttCells = document.querySelectorAll('.ttt-cell');
+const tttReset = document.getElementById('ttt-reset');
+const scoreP1El = document.getElementById('score-p1');
+const scoreCpuEl = document.getElementById('score-cpu');
+
+let tttBoard = ['', '', '', '', '', '', '', '', ''];
+let tttGameActive = true;
+let scoreP1 = 0;
+let scoreCpu = 0;
+
+const tttWinningConditions = [
+  [0, 1, 2], [3, 4, 5], [6, 7, 8],
+  [0, 3, 6], [1, 4, 7], [2, 5, 8],
+  [0, 4, 8], [2, 4, 6]
+];
+
+function handleTttClick(e) {
+  const cell = e.target;
+  const index = parseInt(cell.getAttribute('data-index'));
+  
+  if (tttBoard[index] !== '' || !tttGameActive) return;
+  
+  // P1 Move
+  makeMove(index, 'X');
+  if (checkTttWin('X')) {
+    scoreP1++;
+    if(scoreP1El) scoreP1El.textContent = scoreP1;
+    tttGameActive = false;
+    return;
+  }
+  if (!tttBoard.includes('')) {
+    tttGameActive = false;
+    return;
+  }
+
+  // CPU Move
+  setTimeout(() => {
+    if (!tttGameActive) return;
+    let emptyCells = tttBoard.map((val, i) => val === '' ? i : null).filter(val => val !== null);
+    if (emptyCells.length > 0) {
+      const randomMove = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+      makeMove(randomMove, 'O');
+      if (checkTttWin('O')) {
+        scoreCpu++;
+        if(scoreCpuEl) scoreCpuEl.textContent = scoreCpu;
+        tttGameActive = false;
+      }
+    }
+  }, 300);
+}
+
+function makeMove(index, player) {
+  tttBoard[index] = player;
+  tttCells[index].textContent = player;
+}
+
+function checkTttWin(player) {
+  return tttWinningConditions.some(condition => {
+    return condition.every(index => tttBoard[index] === player);
+  });
+}
+
+function resetTttBoard() {
+  tttBoard = ['', '', '', '', '', '', '', '', ''];
+  tttGameActive = true;
+  tttCells.forEach(cell => cell.textContent = '');
+}
+
+function resetTttScore() {
+  scoreP1 = 0;
+  scoreCpu = 0;
+  if(scoreP1El) scoreP1El.textContent = scoreP1;
+  if(scoreCpuEl) scoreCpuEl.textContent = scoreCpu;
+  resetTttBoard();
+}
+
+tttCells.forEach(cell => cell.addEventListener('click', handleTttClick));
+const tttResetBoardBtn = document.getElementById('ttt-reset-board');
+const tttResetScoreBtn = document.getElementById('ttt-reset-score');
+if (tttResetBoardBtn) tttResetBoardBtn.addEventListener('click', resetTttBoard);
+if (tttResetScoreBtn) tttResetScoreBtn.addEventListener('click', resetTttScore);

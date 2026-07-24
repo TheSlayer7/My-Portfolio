@@ -7,17 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script defer src="main.js"></script>
 </head>
 
 <body>
-  <div class="bg-blobs">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-  </div>
   <div id="scroll-progress"></div>
   <header>
     <h1>Ayush Saha</h1>
@@ -68,7 +63,7 @@
       <div class="hero-visual">
         <div class="glowing-orb"></div>
         <div class="profile-container">
-          <img src="photo.png" alt="Ayush Saha" class="profile-image">
+          <img src="MorningProfile.png" id="profile-img" alt="Ayush Saha" class="profile-image">
         </div>
       </div>
     </section>
@@ -77,31 +72,31 @@
       <h2>Technical Skills</h2>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <h3>⚔️ Languages</h3>
           <ul class="tags">
             <li>Python</li><li>Java</li><li>C/C++</li><li>SQL</li><li>R</li><li>JavaScript</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fa-solid fa-globe"></i> Web & Frameworks</h3>
+          <h3>🗺️ Web & Frameworks</h3>
           <ul class="tags">
             <li>HTML/CSS</li><li>Django</li><li>Flask</li><li>React</li><li>TypeScript</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fa-solid fa-brain"></i> ML / AI</h3>
+          <h3>🔮 ML / AI</h3>
           <ul class="tags">
             <li>PyTorch</li><li>Scikit-learn</li><li>TensorFlow</li><li>Hugging Face</li><li>U-Net CNN</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fa-solid fa-cloud"></i> Cloud & Tools</h3>
+          <h3>🎒 Cloud & Tools</h3>
           <ul class="tags">
             <li>AWS (EC2, S3, IAM, VPC)</li><li>IBM Watsonx</li><li>Google Gemini API</li><li>Git</li><li>ESP32</li>
           </ul>
         </div>
         <div class="skill-category">
-          <h3><i class="fa-solid fa-lightbulb"></i> Concepts</h3>
+          <h3>📜 Concepts</h3>
           <ul class="tags">
             <li>OOP</li><li>ML Pipelines</li><li>Deep Learning</li><li>Generative AI</li><li>Soft Computing</li><li>DSA</li>
           </ul>
@@ -119,39 +114,37 @@
     </section>
 
     <section id="experience">
-      <h2>NIT Calicut Summer Intern</h2>
-      <div>
-        <strong>NIT Calicut– Finance Department (Centre for Information Technology, Research and Automation)</strong>
-        (May'26 - July'26)<br>
+      <h2>Quest Log</h2>
+      <div class="quest-card project-card">
+        <h3>★ NIT Calicut Summer Intern <span class="quest-status">[Completed]</span></h3>
+        <strong>NIT Calicut– Finance Department (CITRA)</strong> (May'26 - July'26)<br>
         <span>
           Developed a full-stack TA (Travel Allowance) claims tracking system for the Finance Department under CITRA, 
           covering claim submission, review, and approval workflows with Role-Based Access Control (RBAC) across Admin, Faculty, and TA roles. 
           Built backend REST APIs and a React web interface with JWT-based authentication (including TOTP two-factor login) 
           and a PostgreSQL schema to automate department-level claim tracking and reduce manual administrative overhead.<br>
-          <a
-            href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_summerinternship-nitcalicut-citra-ugcPost-7451666933206401024-RN2t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs">View
-            Certificate</a>
+          <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_summerinternship-nitcalicut-citra-ugcPost-7451666933206401024-RN2t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs">View Certificate</a>
           <a href="https://github.com/TheSlayer7/TA-TRACKING">View Project</a>
         </span>
       </div>
-      <div>
-        <strong>AI Automation Engineer Intern – Zeepty India</strong> (Aug’25 – Nov'25)<br>
+      <div class="quest-card project-card">
+        <h3>★ AI Automation Engineer Intern <span class="quest-status">[Completed]</span></h3>
+        <strong>Zeepty India</strong> (Aug’25 – Nov'25)<br>
         <span>
           Built supervised and unsupervised ML pipelines using PyTorch and Scikit-learn; fine-tuned models for production 
           AI automation tasks. Preprocessed and integrated CSV datasets into ML pipelines, and automated end-to-end 
           data workflows using Python.<br>
           <a href="https://www.linkedin.com/company/zeepty/" target="_blank">LinkedIn</a>
-          <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_internship-aiautomation-zeepty-activity-7401664909807099904-z2O6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs"
-            target="_blank">View Certificate</a>
+          <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_internship-aiautomation-zeepty-activity-7401664909807099904-z2O6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs" target="_blank">View Certificate</a>
         </span>
       </div>
-      <div>
-        <strong>AI/ML Data Analyst — GDG VIT-AP (Google Developer Groups)</strong> (Mar'26 - July'26)<br>
+      <div class="quest-card project-card">
+        <h3>★ AI/ML Data Analyst <span class="quest-status">[Active]</span></h3>
+        <strong>GDG VIT-AP (Google Developer Groups)</strong> (Mar'26 - July'26)<br>
         <span>
           Performing dataset analysis, preprocessing, and supporting machine learning experiments within GDG VIT-AP’s 
           AI initiatives.<br>
-          <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_ai-machinelearning-dataanalysis-activity-7435411698083123200-etZ0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs"
-            target="_blank">View Certificate</a>
+          <a href="https://www.linkedin.com/posts/ayush-saha-11ba7a334_ai-machinelearning-dataanalysis-activity-7435411698083123200-etZ0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFQp8ycB7vIpxFhOS66TrXmHH5VJzIhoeLs" target="_blank">View Certificate</a>
         </span>
       </div>
     </section>
@@ -660,42 +653,55 @@
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        <span>Email:</span> <a href="mailto:saha92873@gmail.com">saha92873@gmail.com</a><br>
-        <span>GitHub:</span> <a href="https://github.com/TheSlayer7" target="_blank">TheSlayer7</a><br>
-        <span>LinkedIn:</span> <a href="http://www.linkedin.com/in/ayush-saha-11ba7a334" target="_blank">Ayush-Saha</a>
-      </p>
-    </section>
+    <footer id="save-point">
+      <div class="footer-container">
+        <div class="save-window">
+          <p>========================</p>
+          <p class="save-title">SAVE PROGRESS...</p>
+          <div class="save-links">
+            <p><a href="https://github.com/TheSlayer7" target="_blank">▶ GitHub</a></p>
+            <p><a href="http://www.linkedin.com/in/ayush-saha-11ba7a334" target="_blank">▶ LinkedIn</a></p>
+            <p><a href="#" id="email-link">▶ Email</a></p>
+          </div>
+          <p>Thanks for visiting.</p>
+          <p>========================</p>
+        </div>
+        
+        <div class="tic-tac-toe">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <p class="save-title" style="margin-bottom: 0;">MINIGAME</p>
+            <div style="font-family: 'Space Mono', monospace; font-size: 0.8rem; color: var(--text);">
+              P1: <span id="score-p1">0</span> | CPU: <span id="score-cpu">0</span>
+            </div>
+          </div>
+          <div class="ttt-board" id="ttt-board">
+            <div class="ttt-cell" data-index="0"></div>
+            <div class="ttt-cell" data-index="1"></div>
+            <div class="ttt-cell" data-index="2"></div>
+            <div class="ttt-cell" data-index="3"></div>
+            <div class="ttt-cell" data-index="4"></div>
+            <div class="ttt-cell" data-index="5"></div>
+            <div class="ttt-cell" data-index="6"></div>
+            <div class="ttt-cell" data-index="7"></div>
+            <div class="ttt-cell" data-index="8"></div>
+          </div>
+          <div style="display: flex; gap: 5px; margin-top: 5px;">
+            <button id="ttt-reset-board" class="filter-btn glow-btn" style="flex: 1; padding: 0.2rem; font-size: 0.8rem;">Reset Board</button>
+            <button id="ttt-reset-score" class="filter-btn glow-btn" style="flex: 1; padding: 0.2rem; font-size: 0.8rem;">Reset Score</button>
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <section id="minigame" class="reveal" style="max-width: 600px; margin: 0 auto 4rem auto; text-align: center;">
-    <h2>Take a Break</h2>
-    <div class="tictactoe-container" style="background: var(--card); border: 1px solid var(--border); padding: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-      <div class="score-board" style="display: flex; justify-content: space-around; margin-bottom: 1.5rem; font-weight: bold; color: var(--text);">
-        <div class="score-badge">You (X): <span id="scoreX" style="color: var(--accent);">0</span></div>
-        <div class="score-badge">Ties: <span id="scoreTie">0</span></div>
-        <div class="score-badge">AI (O): <span id="scoreO" style="color: #ef4444;">0</span></div>
-      </div>
-      <div class="tictactoe-board" id="board" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; max-width: 300px; margin: 0 auto 1.5rem auto;">
-        <div class="cell" data-index="0"></div><div class="cell" data-index="1"></div><div class="cell" data-index="2"></div>
-        <div class="cell" data-index="3"></div><div class="cell" data-index="4"></div><div class="cell" data-index="5"></div>
-        <div class="cell" data-index="6"></div><div class="cell" data-index="7"></div><div class="cell" data-index="8"></div>
-      </div>
-      <button id="resetGameBtn" class="filter-btn">Reset Game</button>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Ayush Saha</p>
-  </footer>
-  
   <div id="scrollTopContainer" class="scroll-top-container">
-    <svg class="progress-ring" width="50" height="50">
-      <circle class="progress-ring__circle" stroke="var(--accent)" stroke-width="3" fill="transparent" r="22" cx="25" cy="25"/>
-    </svg>
-    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <div class="hp-bar-container" title="Portfolio Progress">
+      <span class="hp-label">HP</span>
+      <div class="hp-bar-bg">
+        <div class="hp-bar-fill" id="hp-fill"></div>
+      </div>
+    </div>
+    <button id="scrollTopBtn" aria-label="Scroll to top" class="retro-btn">▲ UP</button>
   </div>
 
 </body>
