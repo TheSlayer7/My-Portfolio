@@ -1115,3 +1115,45 @@ body.dark .glowing-orb {
 .text-glow-breathing {
   animation: breatheGlow 1.5s ease-in-out infinite;
 }
+#certifications li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--accent), 0 0 30px var(--glow);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+#education li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--accent), 0 0 30px var(--glow);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+.pixel-welcome { 
+  font-family: 'Press Start 2P', monospace; 
+  text-transform: uppercase; 
+  font-size: 1.5rem;
+}
+
+@keyframes breatheColorsDay {
+  0% { color: #ff9900; text-shadow: 0 0 5px #ff9900; }
+  50% { color: #ffcc00; text-shadow: 0 0 15px #ffcc00; }
+  100% { color: #ff9900; text-shadow: 0 0 5px #ff9900; }
+}
+
+@keyframes breatheColorsNight {
+  0% { color: #55c1ff; text-shadow: 0 0 5px #55c1ff; }
+  50% { color: #a374ff; text-shadow: 0 0 15px #a374ff; }
+  100% { color: #55c1ff; text-shadow: 0 0 5px #55c1ff; }
+}
+
+.breathing-colors {
+  animation: breatheColorsDay 3s ease-in-out infinite;
+}
+
+body.dark .breathing-colors {
+  animation: breatheColorsNight 3s ease-in-out infinite;
+}
+
