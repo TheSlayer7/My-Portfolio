@@ -976,6 +976,7 @@ body.dark .bg-blobs {
 
 /* Project Filters */
 .project-filters {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
   gap: 1rem;
