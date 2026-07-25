@@ -28,10 +28,10 @@ const profileImg = document.getElementById('profile-img');
 if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark');
   if(themeToggle) themeToggle.textContent = '🌙';
-  if(profileImg) profileImg.src = 'NightProfile.png';
+  if(profileImg) profileImg.setAttribute('src', 'NightProfile.png');
 } else {
   if(themeToggle) themeToggle.textContent = '☀️';
-  if(profileImg) profileImg.src = 'MorningProfile.png';
+  if(profileImg) profileImg.setAttribute('src', 'MorningProfile.png');
 }
 
 if(themeToggle) {
@@ -39,7 +39,8 @@ if(themeToggle) {
     body.classList.toggle('dark');
     const isDark = body.classList.contains('dark');
     themeToggle.textContent = isDark ? '🌙' : '☀️';
-    if(profileImg) profileImg.src = isDark ? 'NightProfile.png' : 'MorningProfile.png';
+    const currentProfileImg = document.getElementById('profile-img');
+    if(currentProfileImg) currentProfileImg.setAttribute('src', isDark ? 'NightProfile.png' : 'MorningProfile.png');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
