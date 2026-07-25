@@ -28,10 +28,10 @@ const profileImg = document.getElementById('profile-img');
 if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark');
   if(themeToggle) themeToggle.textContent = '🌙';
-  if(profileImg) profileImg.setAttribute('src', 'NightProfile.png');
+  if(profileImg) profileImg.setAttribute('src', 'NightProfile.webp');
 } else {
   if(themeToggle) themeToggle.textContent = '☀️';
-  if(profileImg) profileImg.setAttribute('src', 'MorningProfile.png');
+  if(profileImg) profileImg.setAttribute('src', 'MorningProfile.webp');
 }
 
 if(themeToggle) {
@@ -40,7 +40,7 @@ if(themeToggle) {
     const isDark = body.classList.contains('dark');
     themeToggle.textContent = isDark ? '🌙' : '☀️';
     const currentProfileImg = document.getElementById('profile-img');
-    if(currentProfileImg) currentProfileImg.setAttribute('src', isDark ? 'NightProfile.png' : 'MorningProfile.png');
+    if(currentProfileImg) currentProfileImg.setAttribute('src', isDark ? 'NightProfile.webp' : 'MorningProfile.webp');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 }
@@ -80,7 +80,7 @@ document.querySelectorAll('section, .project-card, #education li, #experience di
 });
 
 const revealOptions = {
-  threshold: 0.15,
+  threshold: 0,
   rootMargin: "0px 0px -50px 0px"
 };
 

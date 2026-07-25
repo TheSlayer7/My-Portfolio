@@ -23,3 +23,7 @@ Thumbs.db
 
 # Inspiration files
 Inspiration*.png
+
+# Node and Temp Files
+node_modules/
+.temp_img_convert/
